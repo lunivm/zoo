@@ -6,14 +6,15 @@ services:
       context: ./auth
     ports:
       - 3000:3000
+    command: npm start
     volumes:
-      - auth_node_modules:/home/node_modules
-      - ./auth:/home
+      - zoo_auth_node_modules:/home/app/node_modules
+      - ./auth:/home/app:delegated
     networks:
       - shared_bridge
 
 volumes:
-  auth_node_modules:
+  zoo_auth_node_modules:
 
 networks:
   shared_bridge:

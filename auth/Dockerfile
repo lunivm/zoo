@@ -1,6 +1,6 @@
 FROM node:12-alpine3.10
 
-ENV HOME=/home
+ENV HOME=/home/app
 
 WORKDIR $HOME
 COPY ./package.json ./package-lock.json $HOME/
