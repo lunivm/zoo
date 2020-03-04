@@ -1,12 +1,13 @@
 FROM node:12-alpine3.10
 
-ENV HOME=/home/app
+WORKDIR /home/app
 
-WORKDIR $HOME
-COPY ./package.json ./package-lock.json $HOME/
+# build node_modules
+COPY ./package.json ./package-lock.json ./
 RUN npm ci
 
-COPY ./ $HOME
+# copy source code
+COPY ./ ./
 
 EXPOSE 3000
 

@@ -7,9 +7,9 @@ services:
     ports:
       - 3000:3000
     command: npm start
-    volumes:
-      - zoo_auth_node_modules:/home/app/node_modules
-      - ./auth:/home/app:delegated
+#    volumes:
+#      - zoo_auth_node_modules:/home/app/node_modules
+#      - ./auth:/home/app:delegated
     networks:
       - shared_bridge
 

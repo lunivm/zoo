@@ -13,6 +13,6 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 
-console.log('auth app started');
+console.log('auth app started rebuild folders');
 
 module.exports = app;
