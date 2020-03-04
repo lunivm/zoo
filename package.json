@@ -1,0 +1,11 @@
+{
+  "name": "zoo",
+  "version": "0.0.0",
+  "scripts": {
+    "express": "express"
+  },
+  "description": "Playground for different stuff",
+  "devDependencies": {
+    "express-generator": "^4.16.1"
+  }
+}

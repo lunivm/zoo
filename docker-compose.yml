@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  auth:
+    build:
+      context: ./auth
+    ports:
+      - 3000:3000
+    volumes:
+      - auth_node_modules:/home/node_modules
+      - ./auth:/home
+    networks:
+      - shared_bridge
+
+volumes:
+  auth_node_modules:
+
+networks:
+  shared_bridge:
+    driver: bridge
