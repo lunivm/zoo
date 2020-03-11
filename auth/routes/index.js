@@ -1,9 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const root = require('./root');
+const login = require('./login');
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.send({ok: true});
-});
-
-module.exports = router;
+module.exports = app => {
+  app.use('/', root);
+  app.use('/login', login);
+};

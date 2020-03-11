@@ -2,10 +2,12 @@
   "name": "zoo",
   "version": "0.0.0",
   "scripts": {
-    "express": "express"
+    "express": "express",
+    "create-react-app": "create-react-app"
   },
   "description": "Playground for different stuff",
   "devDependencies": {
+    "create-react-app": "^3.4.0",
     "express-generator": "^4.16.1"
   }
 }
