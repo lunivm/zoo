@@ -16,7 +16,7 @@ function App() {
           <input id="password" type="password" placeholder="Password"/>
         </div>
         <div className="form-row">
-          <button>Login</button>
+          <button onClick={function() {window.location.href = '/login'}}>Login</button>
         </div>
       </div>
 
