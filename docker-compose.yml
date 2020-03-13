@@ -5,7 +5,7 @@ services:
     build:
       context: ./auth
     ports:
-      - 3000:3000
+      - 4000:3000
       - 9229:9229
     command: npm start
     volumes:
