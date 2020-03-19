@@ -13,7 +13,10 @@ const responseInterceptor = async res => {
 };
 
 const getFetchParams = params => Object.assign({}, params, {
-  mode: 'cors'
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
 
 export async function get(url) {
