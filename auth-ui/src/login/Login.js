@@ -3,6 +3,7 @@ import './Login.css';
 import logo from '../logo.svg';
 
 import { post } from '../core/http-request';
+import { urlFromObject } from '../core/query-params';
 
 class Login extends React.Component {
   constructor(props) {
@@ -18,10 +19,18 @@ class Login extends React.Component {
 
   async handleLogin(event) {
     const res = await post('http://localhost:4000/auth/login', this.state);
+
+    if (res.ok) {
+      this._redirectToAuth();
+    }
   }
 
   handleInputChange(propName, event) {
     this.setState({[propName]: event.target.value});
+  }
+
+  _redirectToAuth() {
+    window.location.href = 'http://localhost:4000/auth' + window.location.search;
   }
 
   render() {
