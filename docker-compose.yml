@@ -3,14 +3,14 @@ version: '3.7'
 services:
   auth:
     build:
-      context: ./auth
+      context: ./services/auth
     ports:
       - 4000:3000
       - 9229:9229
     command: npm start
     volumes:
       - zoo_auth_node_modules:/home/app/node_modules
-      - ./auth:/home/app:delegated
+      - ./services/auth:/home/app:delegated
     networks:
       - shared_bridge
 
